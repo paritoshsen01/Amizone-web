@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const darkModeToggle = document.getElementById('darkModeToggle');
   const body = document.body;
 
-  // Default collapsed on mobile
   if (window.innerWidth < 900) {
     sidebar.classList.add('collapsed');
   }
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Attendance Chart
   const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
   const attendanceChart = new Chart(attendanceCtx, {
     type: 'doughnut',
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // CGPA Chart
   const cgpaCtx = document.getElementById('cgpaChart').getContext('2d');
   const cgpaChart = new Chart(cgpaCtx, {
     type: 'line',
@@ -81,3 +78,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
