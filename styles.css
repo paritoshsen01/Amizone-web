@@ -278,20 +278,34 @@ body, html {
 }
 
 .progress-circle {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 0.75rem;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #38d9a9, #20c997);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #20c997, inset 0 0 15px #38d9a9;
+  border: 2px solid #1cae8f;
+  transition: box-shadow 0.3s ease;
+}
+
+.progress-circle:hover {
+  box-shadow: 0 0 25px #20c997, inset 0 0 25px #38d9a9;
 }
 
 .circular-chart {
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 90px;
+  max-height: 90px;
 }
 
 .percentage {
-  font-size: 0.6em;
+  font-size: 1em;
   fill: #fff;
-  font-weight: 600;
+  font-weight: 900;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.9);
+  user-select: none;
 }
 
 .attendance-card h3 {
