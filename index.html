@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amizone Upgraded Dashboard Clean</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">AMI<span>ZONE</span></div>
+        <button class="sidebar-toggle" aria-label="Toggle sidebar">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="#"><i class="fas fa-calendar-alt"></i> My Calendar</a></li>
+          <li><a href="#"><i class="fas fa-book"></i> My Courses</a></li>
+          <li><a href="#"><i class="fas fa-clipboard-list"></i> Registration</a></li>
+          <li><a href="#"><i class="fas fa-clock"></i> Time Table</a></li>
+          <li><a href="#"><i class="fas fa-chalkboard-teacher"></i> My Faculty</a></li>
+          <li><a href="#"><i class="fas fa-file-alt"></i> Examination</a></li>
+          <li><a href="#"><i class="fas fa-briefcase"></i> ATPC Placement</a></li>
+          <li><a href="#"><i class="fas fa-file"></i> Student Document</a></li>
+          <li><a href="#"><i class="fas fa-money-check-alt"></i> Fee Details</a></li>
+          <li><a href="#"><i class="fas fa-file-signature"></i> IAD</a></li>
+          <li><a href="#"><i class="fas fa-clipboard-check"></i> Gssc Registration</a></li>
+          <li><a href="#"><i class="fas fa-comment-alt"></i> Suggestion Box</a></li>
+          <li><a href="#"><i class="fas fa-newspaper"></i> The Global Times</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="main-header">
+        <div class="breadcrumb">
+          <i class="fas fa-home"></i> Home > Dashboard
+        </div>
+        <div class="header-right">
+          <button class="icon-btn" aria-label="Notifications">
+            <i class="fas fa-bell"></i><span class="badge">17</span>
+          </button>
+          <button class="icon-btn" aria-label="Messages">
+            <i class="fas fa-envelope"></i>
+          </button>
+          <button class="icon-btn" aria-label="Settings">
+            <i class="fas fa-cog"></i>
+          </button>
+          <button class="icon-btn" aria-label="Calendar">
+            <i class="fas fa-calendar-alt"></i><span class="badge">1</span>
+          </button>
+          <div class="user-profile">
+            <img src="https://i.pravatar.cc/40" alt="User Avatar" />
+            <div class="user-info">
+              <span class="user-name">Mr PARITOSH S...</span>
+              <span class="user-id">A801052225093</span>
+            </div>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <button id="darkModeToggle" class="icon-btn" aria-label="Toggle Dark Mode" title="Toggle Dark Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+      <section class="dashboard-cards">
+        <div class="card attendance-card">
+          <h3>Attendance</h3>
+          <div class="progress-circle" data-progress="12">
+            <svg viewBox="0 0 36 36" class="circular-chart red">
+              <path class="circle-bg"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path class="circle"
+                stroke-dasharray="33, 100"
+                d="M18 2.0845
+                  a 15.9155 15.9155 0 0 1 0 31.831
+                  a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" class="percentage">12</text>
+            </svg>
+          </div>
+          <p>Below 75%</p>
+        </div>
+        <div class="card fee-card">
+          <h3>No Fee Due</h3>
+        </div>
+        <div class="card achievement-card">
+          <h3>Achievements</h3>
+          <p>0</p>
+          <button class="btn">Add Achievement</button>
+        </div>
+        <div class="card cgpa-card">
+          <h3>CGPA : 0.00</h3>
+          <div class="cgpa-chart">
+            <svg viewBox="0 0 100 50">
+              <polyline points="0,50 10,40 20,30 30,20 40,10 50,0 60,10 70,20 80,30 90,40 100,50" fill="none" stroke="#fff" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="cgpa-stats">
+            <div class="stat">
+              <span class="stat-label">Current Semester</span>
+              <span class="stat-value">0.00</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Overall</span>
+              <span class="stat-value">0.00</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="classes-attendance">
+        <div class="my-classes">
+          <h2>My Classes</h2>
+          <div class="calendar-controls">
+            <button aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <button aria-label="Calendar"><i class="fas fa-calendar-alt"></i></button>
+          </div>
+          <ul class="class-list">
+            <li>
+              <span class="class-time">10:10 - 11:09</span>
+              <div class="class-info">
+                <span class="class-name">ENGINEERING PHYSICS</span>
+                <span class="class-teacher">Dr Munna Dan [311962]</span>
+                <span class="class-room">FF-LT-4</span>
+              </div>
+              <span class="class-status blue"></span>
+            </li>
+            <li>
+              <span class="class-time">11:10 - 12:09</span>
+              <div class="class-info">
+                <span class="class-name">ESSENTIAL OF COMMUNICATION</span>
+                <span class="class-teacher">Dr Biswajit Sarkar [312671]</span>
+                <span class="class-room">FF-LT-4</span>
+              </div>
+              <span class="class-status green"></span>
+            </li>
+            <li>
+              <span class="class-time">13:50 - 14:49</span>
+              <div class="class-info">
+                <span class="class-name">PROGRAMMING FOR PROBLEM SOLVING</span>
+                <span class="class-teacher">Dr Jyoti Singh [315279]</span>
+                <span class="class-room">FF-LT-4</span>
+              </div>
+              <span class="class-status blue"></span>
+            </li>
+            <li>
+              <span class="class-time">14:50 - 15:49</span>
+              <div class="class-info">
+                <span class="class-name">WEB TECHNOLOGY LAB</span>
+                <span class="class-teacher">Ms Jeetu Singh [310549]</span>
+                <span class="class-room">FF-LT-4</span>
+              </div>
+              <span class="class-status green"></span>
+            </li>
+            <li>
+              <span class="class-time">15:50 - 16:50</span>
+              <div class="class-info">
+                <span class="class-name">WEB TECHNOLOGY LAB</span>
+                <span class="class-teacher">Ms Jeetu Singh [310549]</span>
+                <span class="class-room">FF-LT-4</span>
+              </div>
+              <span class="class-status green"></span>
+            </li>
+          </ul>
+        </div>
+        <div class="my-attendance">
+          <h2>My Attendance</h2>
+          <ul class="attendance-list">
+            <li>
+              <span class="course-code">DSAS40101</span>
+              <span class="course-name">ENGINEERING MATHEMATICS-I</span>
+              <span class="attendance-count">3/17</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 17.65%;"></div>
+                <span class="progress-percent">17.65%</span>
+              </div>
+            </li>
+            <li>
+              <span class="course-code">DSAS40103</span>
+              <span class="course-name">ENGINEERING PHYSICS</span>
+              <span class="attendance-count">2/18</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 11.11%;"></div>
+                <span class="progress-percent">11.11%</span>
+              </div>
+            </li>
+            <li>
+              <span class="course-code">DSAS40105</span>
+              <span class="course-name">ENGINEERING PHYSICS LAB</span>
+              <span class="attendance-count">6/18</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 33.33%;"></div>
+                <span class="progress-percent">33.33%</span>
+              </div>
+            </li>
+            <li>
+              <span class="course-code">VAEVS40101</span>
+              <span class="course-name">ENVIRONMENTAL STUDIES.</span>
+              <span class="attendance-count">4/8</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 50%;"></div>
+                <span class="progress-percent">50.00%</span>
+              </div>
+            </li>
+            <li>
+              <span class="course-code">AECSS40101</span>
+              <span class="course-name">ESSENTIAL OF COMMUNICATION</span>
+              <span class="attendance-count">2/6</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 33.33%;"></div>
+                <span class="progress-percent">33.33%</span>
+              </div>
+            </li>
+            <li>
+              <span class="course-code">ALAN40101</span>
+              <span class="course-name">INTRODUCTION TO FRENCH AS A FOREIGN LANGUAGE</span>
+              <span class="attendance-count">1/7</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 14.29%;"></div>
+                <span class="progress-percent">14.29%</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <button class="mobile-sidebar-toggle" aria-label="Toggle sidebar">
+    <i class="fas fa-bars"></i>
+  </button>
+</body>
+</html>
