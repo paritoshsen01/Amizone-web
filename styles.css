@@ -266,39 +266,39 @@ body, html {
 .attendance-card {
   background: linear-gradient(135deg, #20c997, #38d9a9);
   position: relative;
+  border-radius: 15px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 15px rgba(32, 201, 151, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
 
 .progress-circle {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 1rem;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 0.75rem;
 }
 
 .circular-chart {
-  display: block;
-  margin: 10px auto;
-  max-width: 80px;
-  max-height: 80px;
-}
-
-.circle-bg {
-  fill: none;
-  stroke: #eee;
-  stroke-width: 3.8;
-}
-
-.circle {
-  fill: none;
-  stroke-width: 3.8;
-  stroke-linecap: round;
-  stroke: #ff4d4d;
-  animation: progress 1s ease-out forwards;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 .percentage {
+  font-size: 0.6em;
   fill: #fff;
-  font-size: 0.5em;
-  text-anchor: middle;
+  font-weight: 600;
+}
+
+.attendance-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  letter-spacing: 0.5px;
 }
 
 @keyframes progress {
@@ -377,18 +377,48 @@ body, html {
 }
 
 .my-classes, .my-attendance {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+  padding: 2rem;
   flex: 1 1 400px;
   min-width: 300px;
+  border: 1px solid rgba(255,255,255,0.8);
+  position: relative;
+  overflow: hidden;
+}
+
+.my-classes::before, .my-attendance::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.my-attendance::before {
+  background: linear-gradient(90deg, #20c997, #38d9a9);
 }
 
 .my-classes h2, .my-attendance h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   color: #003366;
+  font-size: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.my-attendance h2::before {
+  content: '\f46c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #20c997;
+  font-size: 1.2rem;
 }
 
 .calendar-controls {
@@ -598,10 +628,14 @@ body, html {
   }
   .sidebar-nav ul {
     gap: 0.25rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
   .sidebar-nav ul li a {
     padding: 0.4rem 0.5rem;
     font-size: 0.75rem;
+    white-space: nowrap;
   }
   .main-header {
     padding: 0.5rem 0.75rem;
